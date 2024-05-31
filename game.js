@@ -36,6 +36,9 @@ document.addEventListener('DOMContentLoaded', () => {
             randomTile.textContent = Math.random() > 0.5 ? 2 : 4;
             randomTile.style.backgroundColor = colors[randomTile.textContent];
         }
+        else {
+            alert("Game - over");
+        }
     }
 
     function moveTiles(direction) {
@@ -115,6 +118,7 @@ document.addEventListener('DOMContentLoaded', () => {
         generateNumber();
         generateNumber(); 
         score = 0;
+        scoreDisplay.textContent = "0";
     }
 
     restartButton.addEventListener('click', restartGame);
