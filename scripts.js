@@ -76,3 +76,16 @@ function editTask(taskid) {
     localStorage.setItem('tasks', JSON.stringify(tasks));
     taskitem.querySelector('span').textContent = newtasktext;
 }
+
+function searchTasks() {
+    const searchTerm = document.getElementById('search-task').value.toLowerCase();
+    const tasks = document.querySelectorAll('#task-list li');
+    tasks.forEach(task => {
+        const taskText = task.querySelector('span').textContent.toLowerCase();
+        if (taskText.includes(searchTerm)) {
+            task.style.display = '';
+        } else {
+            task.style.display = 'none';
+        }
+    });
+}
