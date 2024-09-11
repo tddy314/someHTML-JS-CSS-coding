@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>X/O Game</title>
+        <link rel="stylesheet" href="xo.css">
+    </head>
+    <body>
+        <h1>XO Game</h1>
+        <h3 id="h3">Using your IQ to beat your enemy</h3>
+        <div class="container">
+            <label for="diff">Choose level: </label>
+            <select id="diff">
+                <option value="3">3x3</option>
+                <option value="4">4x4</option>
+                <option value="5">5x5</option>
+            </select>
+        </div>
+        <div id="board"></div>
+        <div id="info">
+            <p id="status"></p>
+            <button id="restart">Restart</button>
+        </div>
+        <script src="xo.js"></script>
+    </body>
+</html>
